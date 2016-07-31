@@ -1,0 +1,235 @@
+body, html {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	// font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "微软雅黑";
+}
+
+main {
+	height: 1000px;
+	width: 1030px;
+	margin: auto;
+	padding: 50px 0;
+	background-color: rgb(248,248,248);
+}
+
+h1, h2, h3 {
+	margin: 0;
+}
+
+ul {
+	padding: 0;
+}
+
+dl, dd {
+	margin: 0;
+}
+
+.sidebar {
+	box-sizing: border-box;
+	float: left;
+	width: 380px;
+	height: 100%;
+	// border-right: 1px solid rgba(0,0,0,0.3);
+	padding-right: 40px;
+}
+
+.content {
+	box-sizing: border-box;
+	float: right;
+	width: 650px;
+	height: 100%;
+	padding-right: 50px;
+}
+
+figure {
+	text-align: center;
+	margin-bottom: 50px;
+	h2 {
+		color: rgb(30,30,30);
+		font-size: 30px;
+		margin: 10px 0 5px 0;
+	}
+	h3 {
+		color: rgb(97,97,97);
+		font-size: 19px;
+	}
+}
+
+#qr-code {
+	position: relative;
+	overflow: hidden;
+	border: 1px black rgb(232,232,232);
+	border-radius: 100%;
+	width: 150px;
+	height: 150px;
+	margin: auto;
+	img {
+		width: 227px;
+		position: relative;
+		left: -45px;
+	}
+}
+
+.info-sec {
+	margin-bottom: 50px;
+	.sec-title {
+		position: relative;
+		background-color: rgb(72,162,210);
+		color: rgb(255,255,255);
+		height: 36px;
+		width: 218px;
+		padding: 5px 50px;
+		line-height: 35px;
+		&:after {
+			content: "";
+			position: absolute;
+			width: 0;
+			height: 0;
+			border-top: 23px solid transparent;
+			border-left: 20px solid rgb(72,162,210);
+			border-bottom: 23px solid transparent;
+			top: 0px;
+			right: -20px;
+		}
+	}
+	li {
+		position: relative;
+		list-style: none;
+		color: rgb(97,97,97);
+		margin-bottom: 10px;
+		padding-left: 36px;
+		// label {
+		// 	float: left;
+		// 	width: 100px;
+		// }
+	}
+}
+
+.language {
+	li {
+		&:before {
+			position: relative;
+			left: -10px;
+			font-family: FontAwesome;
+			content: "\f005";
+		}
+	}
+}
+
+.contact {
+	li {
+		&:before {
+			position: relative;
+			left: -10px;
+			font-family: FontAwesome;
+		}
+	}
+}
+
+.phone {
+	&:before {
+		content: "\f095";
+	}
+}
+
+.email {
+	&:before {
+		content: "\f003";
+	}
+}
+
+.wechat {
+	&:before {
+		content: "\f1d7";
+	}
+}
+
+.weibo {
+	&:before {
+		content: "\f18a";
+	}
+}
+
+.github {
+	&:before {
+		content: "\f09b";
+	}
+}
+
+.content-sec {
+	.sec-title {
+		position: relative;
+		height: 36px;
+		padding: 5px 50px;
+		line-height: 35px;
+		border-bottom: 3px solid rgb(211,211,211);
+	}
+	&:before {
+		float: left;
+		font-family: FontAwesome;
+		color: rgb(255,255,255);
+		background-color: rgb(72,162,210);
+		width: 36px;
+		height: 36px;
+		border-radius: 100%;
+		text-align: center;
+		line-height: 36px;
+		position: relative;
+		top: 5px;
+		font-size: 20px;
+	}
+	li {
+		list-style: none;
+		margin-bottom: 10px;	
+	}
+}
+
+.project, .work {
+	li {
+		overflow: hidden;
+	}
+	.sec-left {
+		float: left;
+		width: 30%;
+		h3 {
+			font-size: 15px;
+			margin: 7px 0;
+		}
+		span {
+			color: #48a2d2;
+		}
+	}
+	.sec-right {
+		float: right;
+		width: 70%;
+		dt {
+			padding: 5px 0;
+			font-size: 17px;
+			font-weight: bold;
+		}
+		dd {
+			color: #616161;
+			margin: 5px 0;
+		}
+	}
+}
+
+.project {
+	&:before {
+		content: "\f135";
+	}
+}
+
+.work {
+	&:before {
+		content: "\f27e";
+	}
+}
+
+.skill {
+	&:before {
+		content: "\f0ad";
+	}
+}

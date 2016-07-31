@@ -1,0 +1,20 @@
+{
+  "name": "my-resume",
+  "version": "1.0.0",
+  "description": "my resume generator",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "keywords": [
+    "resume"
+  ],
+  "author": "lucifan",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-watch": "^4.3.9"
+  }
+}
