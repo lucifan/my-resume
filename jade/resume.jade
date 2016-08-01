@@ -1,7 +1,7 @@
 extend ./layout.jade
 
 block title
-    title my-resume
+    title=resume_title
 
 block style
     link(rel="stylesheet", href="css/style.css")
@@ -13,100 +13,62 @@ block content
             figure
                 div#qr-code
                     img(src="img/pic.jpg", alt="wechat")
-                h2 林逸凡
-                h3 前端工程师
+                h2=name
+                h3=job_description
             section.info-sec.language
                 h3.sec-title 语言能力
                 ul
-                    li 通过CET4和CET6考试
-                    li 能流畅阅读英文书籍、技术文档等资料
-                    li 可以无字幕观看美剧和技术类课程等
-                    li 能在stackoverflow等社区正常交流
+                    each item in language
+                        li=item
             section.info-sec.contact
                 h3.sec-title 联系方式
                 ul
-                    li.phone 18819481274
-                    li.email 281460950@qq.com
-                    li.wechat yf_281460950
-                    li.weibo http://weibo.com/2584433424
-                    li.github https://github.com/lucifan
+                    each item in contact
+                        li(class=item.type)=item.value
         article.content
             section.content-sec.education
                 h3.sec-title 教育经历
                 ul
-                    li
-                        .sec-left
-                            h3 2013.09 - 2017.06
-                        .sec-right
-                            dl
-                                dt 中山大学
-                                dd.major 软件工程(本科)
-                                dd.award 2013 - 2014学年度校优秀团支书
-                                dd.award 第二届广东最会拍片比赛二等奖
+                    each item in education
+                        li
+                            .sec-left
+                                h3 #{item.start + " - " + item.end}
+                            .sec-right
+                                dl
+                                    dt=item.school
+                                    dd.major=item.major
+                                    each award in item.awards
+                                        dd.award=award
             section.content-sec.project
                 h3.sec-title 项目经验
                 ul
-                    li
-                        .sec-left
-                            h3 2014.11 - 2014.11
-                        .sec-right
-                            dl
-                                dt Musir Music
-                                dd 使用模块模式开发的音乐分享平台
-                                dd 使用Tornado搭建简单的后端程序
-                                dd 使用HTML5/CSS3开发响应式页面
-                    li
-                        .sec-left
-                            h3 2016.05 - 2016.05
-                        .sec-right
-                            dl
-                                dt 今天你刷卡了吗
-                                dd 基于Node.js实现的爬虫
-                                dd 利用Promise优化代码结构
-                                dd 通过项目了解异步I/O及事件驱动模型
-                                dd 掌握了异步编程的解决方案
-                    li
-                        .sec-left
-                            h3 2016.06 - 2016.07
-                        .sec-right
-                            dl
-                                dt mini聊天室
-                                dd 使用Socket.io实现实时通话功能
-                                dd 使用React进行组件化编程
-                                dd 使用Express搭建后台
-                                dd 使用Webpack加载模块并驱动自动化工作流
-                    li
-                        .sec-left
-                            h3 2015.04 - 2015.05
-                        .sec-right
-                            dl
-                                dt Resume Generator
-                                dd 这份简历的生成器
-                                dd 使用Gulp作为自动化构建工具
-                                dd 使用Scss预编译语言生成样式
-                                dd 使用Jade渲染模板
+                    each item in project
+                        li
+                            .sec-left
+                                h3 #{item.start + " - " + item.end}
+                            .sec-right
+                                dl
+                                    dt=item.name
+                                    each description in item.descriptions
+                                        dd=description
             section.content-sec.work
                 h3.sec-title 工作经验
                 ul
-                    li
-                        .sec-left
-                            h3 2016.06 - 2016.08
-                            span Web开发实习生
-                        .sec-right
-                            dl
-                                dt 欢聚时代 移动新产品部
-                                dd 重构前端图像处理相关的业务代码，维护产品页面并添加新的功能模块
-                                dd 抽象出可维护性高，拓展性强的通用模板
-                                dd 使用Node.js、Python和PHP编写面对运营需求的爬虫等脚本
+                    each item in project
+                        li
+                            .sec-left
+                                h3 #{item.start + " - " + item.end}
+                                span=item.name
+                            .sec-right
+                                dl
+                                    dt=item.place
+                                    each description in item.descriptions
+                                        dd=description
             section.content-sec.skill
                 h3.sec-title 工作技能
                 ul
-                    li 熟悉HTML5/CSS3的新特性，能够实现较复杂的页面布局
-                    li 了解基本的性能优化方法。能够在项目中加以实践
-                    li 了解HTTP、TCP/IP等协议，具备基本的web安全知识（CSRF/XSS）
-                    li 在项目中使用过Require.js、Webpack的模块化解决方案，了解并实现各种js设计模式
-                    li 熟悉jQuery/Bootstrap的使用，阅读过部分源代码
-                    li 在项目中使用过Sea.js/ RequireJS/WebPack等多种模块化解决方案
+                    each skill in skills
+                        li=skill
             //- section.test-sec
             //-     each item in contact
             //-         li heiheihei

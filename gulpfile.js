@@ -3,8 +3,6 @@ var sass = require('gulp-sass');
 var jade = require('gulp-jade');
 var watch = require('gulp-watch');
 var plugins = require('gulp-load-plugins')();
-var data = require('gulp-data');
-var fs = require('fs');
 
 gulp.task('sass', function() {
 	return gulp.src('scss/*.scss')
