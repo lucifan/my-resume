@@ -1,0 +1,93 @@
+{
+  "name" : "林逸凡",
+  "resume_title" : "前端工程师",
+  "language" : [
+    "通过CET4和CET6考试",
+    "能流畅阅读英文书籍、技术文档等资料",
+    "可以无字幕观看美剧和技术类课程等",
+    "能在stackoverflow等社区正常交流"
+  ],
+  "contact" : [
+    {
+      "type" : "phone",
+      "value" : "18819481274"
+    },
+    {
+      "type" : "email",
+      "value" : "281460950@qq.com"
+    },
+    {
+      "type" : "wechat",
+      "value" : "yf_281460950"
+    },
+    {
+      "type" : "weibo",
+      "value" : "http://weibo.com/2584433424"
+    },
+    {
+      "type" : "github",
+      "value" : "https://github.com/lucifan"
+    }
+  ],
+  "project" : [
+    {
+      "name" : "Musir Music",
+      "start" : "2014.11",
+      "end" : "2014.11",
+      "description" : [
+        "使用模块模式开发的音乐分享平台",
+        "使用Tornado搭建简单的后端程序",
+        "使用HTML5/CSS3开发响应式页面"
+      ]
+    },
+    {
+      "name" : "今天你刷卡了吗",
+      "start" : "2016.05",
+      "end" : "2016.05",
+      "description" : [
+        "基于Node.js实现的爬虫",
+        "利用Promise优化代码结构",
+        "通过项目了解异步I/O及事件驱动模型",
+        "掌握了异步编程的解决方案"
+      ]
+    },
+    {
+      "name" : "mini聊天室",
+      "start" : "2016.06",
+      "end" : "2016.07",
+      "description" : [
+        "使用Socket.io实现实时通话功能",
+        "使用React进行组件化编程",
+        "使用Express搭建后台",
+        "使用Webpack加载模块并驱动自动化工作流"
+      ]
+    },
+    {
+      "name" : "Resume Generator",
+      "start" : "2016.07",
+      "end" : "2016.07",
+      "description" : [
+        "这份简历的生成器",
+        "使用Gulp作为自动化构建工具",
+        "使用Scss预编译语言生成样式",
+        "使用Jade渲染模板"
+      ]
+    }
+  ],
+  "work_experience" : [
+    {
+      "place" : "欢聚时代 移动新产品部",
+      "name" : "Web开发实习生",
+      "start" : "2016.06",
+      "end" : "2016.08",
+      "description" : [
+        "熟悉HTML5/CSS3的新特性，能够实现较复杂的页面布局",
+        "了解基本的性能优化方法。能够在项目中加以实践",
+        "了解HTTP、TCP/IP等协议，具备基本的web安全知识（CSRF/XSS）",
+        "在项目中使用过Require.js、Webpack的模块化解决方案，了解并实现各种js设计模式",
+        "熟悉jQuery/Bootstrap的使用，阅读过部分源代码",
+        "在项目中使用过Sea.js/ RequireJS/WebPack等多种模块化解决方案"
+      ]      
+    }
+  ]
+}

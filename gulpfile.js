@@ -2,6 +2,9 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var jade = require('gulp-jade');
 var watch = require('gulp-watch');
+var plugins = require('gulp-load-plugins')();
+var data = require('gulp-data');
+var fs = require('fs');
 
 gulp.task('sass', function() {
 	return gulp.src('scss/*.scss')
@@ -10,13 +13,28 @@ gulp.task('sass', function() {
 	.pipe(gulp.dest('css'));
 });
 
+function getResumeData() {
+  var resumeData = require('./resume.json');
+  // remove cache
+  // delete require.cache[require.resolve('./resume.json')];
+  // delete require.cache[require.resolve(localePath)];
+
+  // what's this for?
+  // locals.highlight = highlight;
+  console.log(resumeData);
+
+  return resumeData;
+}
+
 gulp.task('jade', function() {
-	return gulp.src('jade/resume.jade')
-	.pipe(watch('jade/*.jade'))
-	.pipe(jade({
-		pretty: true
-	}))
+  return gulp.src('jade/resume.jade')
+  	.pipe(watch('jade/*.jade'))
+    .pipe(plugins.jade({
+    	locals : getResumeData(),
+    	pretty: true
+     }))
 	.pipe(gulp.dest('./'));
 });
+
 
 gulp.task('default', ['sass', 'jade']);

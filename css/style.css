@@ -1,0 +1,201 @@
+@charset "UTF-8";
+body, html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑"; }
+
+main {
+  width: 1030px;
+  margin: auto;
+  padding: 50px 0;
+  background-color: #f8f8f8; }
+
+h1, h2, h3 {
+  margin: 0; }
+
+ul {
+  padding: 0; }
+
+dl, dd {
+  margin: 0; }
+
+.sidebar {
+  box-sizing: border-box;
+  float: left;
+  width: 380px;
+  height: 100%;
+  padding-right: 40px; }
+
+.content {
+  box-sizing: border-box;
+  float: right;
+  width: 650px;
+  height: 100%;
+  padding-right: 50px; }
+
+figure {
+  text-align: center;
+  margin-bottom: 50px; }
+  figure h2 {
+    color: #1e1e1e;
+    font-size: 30px;
+    margin: 10px 0 5px 0; }
+  figure h3 {
+    color: #616161;
+    font-size: 19px; }
+
+#qr-code {
+  position: relative;
+  overflow: hidden;
+  border: 1px black #e8e8e8;
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+  margin: auto; }
+  #qr-code img {
+    width: 227px;
+    position: relative;
+    left: -45px; }
+
+.info-sec {
+  margin-bottom: 50px; }
+  .info-sec .sec-title {
+    position: relative;
+    background-color: #48a2d2;
+    color: white;
+    height: 36px;
+    width: 218px;
+    padding: 5px 50px;
+    line-height: 35px; }
+    .info-sec .sec-title:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-top: 23px solid transparent;
+      border-left: 20px solid #48a2d2;
+      border-bottom: 23px solid transparent;
+      top: 0px;
+      right: -20px; }
+  .info-sec li {
+    position: relative;
+    list-style: none;
+    color: #616161;
+    margin-bottom: 10px;
+    padding-left: 36px; }
+
+.language li:before {
+  position: relative;
+  left: -10px;
+  font-family: FontAwesome;
+  content: "\f005"; }
+
+.contact li:before {
+  position: relative;
+  left: -10px;
+  font-family: FontAwesome; }
+
+.phone:before {
+  content: "\f095"; }
+
+.email:before {
+  content: "\f003"; }
+
+.wechat:before {
+  content: "\f1d7"; }
+
+.weibo:before {
+  content: "\f18a"; }
+
+.github:before {
+  content: "\f09b"; }
+
+.content-sec .sec-title {
+  position: relative;
+  height: 36px;
+  padding: 5px 50px;
+  line-height: 35px;
+  border-bottom: 3px solid lightgray; }
+
+.content-sec:before {
+  float: left;
+  font-family: FontAwesome;
+  color: white;
+  background-color: #48a2d2;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 36px;
+  position: relative;
+  top: 5px;
+  font-size: 20px; }
+
+.content-sec li {
+  list-style: none;
+  margin-bottom: 10px; }
+
+.education li, .project li, .work li {
+  overflow: hidden; }
+
+.education .sec-left, .project .sec-left, .work .sec-left {
+  float: left;
+  width: 30%; }
+  .education .sec-left h3, .project .sec-left h3, .work .sec-left h3 {
+    font-size: 15px;
+    margin: 7px 0; }
+  .education .sec-left span, .project .sec-left span, .work .sec-left span {
+    color: #48a2d2; }
+
+.education .sec-right, .project .sec-right, .work .sec-right {
+  float: right;
+  width: 70%; }
+  .education .sec-right dt, .project .sec-right dt, .work .sec-right dt {
+    padding: 5px 0;
+    font-size: 17px;
+    font-weight: bold; }
+  .education .sec-right dd, .project .sec-right dd, .work .sec-right dd {
+    color: #616161;
+    margin: 5px 0;
+    position: relative;
+    padding-left: 17px; }
+    .education .sec-right dd:before, .project .sec-right dd:before, .work .sec-right dd:before {
+      font-family: FontAwesome;
+      content: "\f005";
+      position: absolute;
+      top: 3px;
+      left: -3px; }
+
+.education:before {
+  content: "\f02d"; }
+
+.education .sec-right dt {
+  font-size: 20px; }
+
+.education .sec-right .major:before {
+  content: "\f19d"; }
+
+.education .sec-right .award:before {
+  content: "\f091"; }
+
+.project:before {
+  content: "\f135"; }
+
+.work:before {
+  content: "\f27e"; }
+
+.skill li {
+  color: #616161;
+  margin: 5px 0;
+  position: relative;
+  padding-left: 24px; }
+  .skill li:before {
+    font-family: FontAwesome;
+    content: "\f005";
+    position: absolute;
+    top: 3px;
+    left: -3px; }
+
+.skill:before {
+  content: "\f0ad"; }

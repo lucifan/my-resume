@@ -7,7 +7,7 @@ body, html {
 }
 
 main {
-	height: 1000px;
+	// height: 1000px;
 	width: 1030px;
 	margin: auto;
 	padding: 50px 0;
@@ -186,7 +186,7 @@ figure {
 	}
 }
 
-.project, .work {
+.education, .project, .work {
 	li {
 		overflow: hidden;
 	}
@@ -212,6 +212,36 @@ figure {
 		dd {
 			color: #616161;
 			margin: 5px 0;
+			position: relative;
+			padding-left: 17px;
+			&:before {
+				font-family: FontAwesome;
+				content: "\f005";
+				position: absolute;
+				top: 3px;
+				left: -3px;
+			}
+		}
+	}
+}
+
+.education {
+	&:before {
+		content: "\f02d";
+	}
+	.sec-right {
+		dt {
+			font-size: 20px;
+		}
+		.major {
+			&:before {
+				content: "\f19d";
+			}
+		}
+		.award {
+			&:before {
+				content: "\f091";
+			}
 		}
 	}
 }
@@ -229,6 +259,19 @@ figure {
 }
 
 .skill {
+	li {
+		color: #616161;
+		margin: 5px 0;
+		position: relative;
+		padding-left: 24px;
+		&:before {
+			font-family: FontAwesome;
+			content: "\f005";
+			position: absolute;
+			top: 3px;
+			left: -3px;
+		}
+	}
 	&:before {
 		content: "\f0ad";
 	}
