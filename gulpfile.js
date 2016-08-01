@@ -19,7 +19,6 @@ function getResumeData() {
 
   // what's this for?
   // locals.highlight = highlight;
-  console.log(resumeData);
 
   return resumeData;
 }
@@ -36,3 +35,12 @@ gulp.task('jade', function() {
 
 
 gulp.task('default', ['sass', 'jade']);
+
+gulp.task('build', function() {
+  return gulp.src('jade/resume.jade')
+    .pipe(plugins.jade({
+    	locals : getResumeData(),
+    	pretty: true
+     }))
+	.pipe(gulp.dest('./'));
+})
